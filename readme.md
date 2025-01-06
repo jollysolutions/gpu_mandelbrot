@@ -1,6 +1,7 @@
 # Fast Mandelbrot set explorer
 
 ## Features
+
 - **Accelerated on GPU** and CPU using numba CUDA JIT
 - **Interactive exploration** using Matplotlib
   - Use mousewheel or left/right click to zoom in/out
@@ -26,13 +27,15 @@ mand = Mandelbrot() # set `gpu = False` if no GPU is available
 # Explore the set using interactive Matplotlib GUI
 mand.explore()
 ```
+
 ### Draw an image
 
 ```python
 # Draw an image and save it to file
 mand.draw('mandelbrot.png')
 ```
-![](img/mandelbrot.png)
+
+![img/mandelbrot.png](img/mandelbrot.png)
 
 ### Make a zoom animation
 
@@ -45,7 +48,8 @@ x_real = -1.749705768080503
 x_imag = -6.13369029080495e-05
 mand.animate(x_real, x_imag, 'mandelbrot.gif')
 ```
-![](img/mandelbrot.gif)
+
+![img/mandelbrot.gif](img/mandelbrot.gif)
 
 ### Run from command line
 
@@ -54,6 +58,7 @@ Use the following command from terminal to launch a GUI with default parameters:
 ```shell
 python ./mandelbrot.py
 ```
+
 ## Gallery
 
 Some examples of HD images, and corresponding code:
@@ -66,7 +71,8 @@ mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.11, .02, .92], stripe_s = 2,
                            -0.625934541001796])
 mand.draw('crown.png')
 ```
-![](img/crown.png)
+
+![img/crown.png](img/crown.png)
 
 ```python
 mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.29, .02, 0.9], ncycle = 8,
@@ -77,7 +83,8 @@ mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.29, .02, 0.9], ncycle = 8,
                            0.00019009168379912058])
 mand.draw('pow.png')
 ```
-![](img/pow.png)
+
+![img/pow.png](img/pow.png)
 
 ```python
 mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.83, .01, .99], stripe_s = 5,
@@ -87,7 +94,8 @@ mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.83, .01, .99], stripe_s = 5,
                            -1.8709580332005737e-06])
 mand.draw('octogone.png')
 ```
-![](img/octogone.png)
+
+![img/octogone.png](img/octogone.png)
 
 ```python
 mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.87, .83, .77],
@@ -97,7 +105,8 @@ mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.87, .83, .77],
                            0.00013386059768851223])
 mand.draw('julia.png')
 ```
-![](img/julia.png)
+
+![img/julia.png](img/julia.png)
 
 ```python
 mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.54, .38, .35], stripe_s = 8,
@@ -107,7 +116,8 @@ mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.54, .38, .35], stripe_s = 8,
                            1.10002905416902])
 mand.draw('lightning.png')
 ```
-![](img/lightning.png)
+
+![img/lightning.png](img/lightning.png)
 
 ```python
 mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.47, .51, .63], step_s = 20,
@@ -117,7 +127,8 @@ mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.47, .51, .63], step_s = 20,
                            -1.369274301311596e-07])
 mand.draw('web.png')
 ```
-![](img/web.png)
+
+![img/web.png](img/web.png)
 
 ```python
 mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.6, .57, .45], stripe_s = 12,
@@ -127,7 +138,8 @@ mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.6, .57, .45], stripe_s = 12,
                            -3.180016406837821e-06])
 mand.draw('wave.png')
 ```
-![](img/wave.png)
+
+![img/wave.png](img/wave.png)
 
 ```python
 mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.63, .83, .98],
@@ -137,7 +149,8 @@ mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.63, .83, .98],
                            0.05719254327783547])
 mand.draw('tiles.png')
 ```
-![](img/tiles.png)
+
+![img/tiles.png](img/tiles.png)
 
 ```python
 mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.29, .52, .59], stripe_s = 5,
@@ -147,13 +160,15 @@ mand = Mandelbrot(maxiter = 5000, rgb_thetas = [.29, .52, .59], stripe_s = 5,
                            -0.0001308892443058033])
 mand.draw('velvet.png')
 ```
-![](img/velvet.png)
+
+![img/velvet.png](img/velvet.png)
 
 ## Runtime 🚀
 
 Computing a sequence of `100` frames of HD pictures (`1280*720` pixels), with `2000` iterations takes approximately **1 second** on a Tesla K80 GPU.
 
 ## Requirements
+
 - NumPy
 - Matplotlib
 - Numba
